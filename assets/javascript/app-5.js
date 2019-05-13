@@ -3,7 +3,7 @@ $( document ).ready(function(){
 
 
 
-var timeLeft = 7; // countdown start time
+var timeLeft = 15; // countdown start time
 var timerId = setInterval(countdown, 1000); // de-crementing one sec at a time
 var numRight = 0; // correct answer array
 var messages = ["Wow! Were you born in Cleveland?", // array for messages called based upon
@@ -15,7 +15,7 @@ var analysis; // calls the message based on the index stated
 $("#countdown").text("seconds remaining: " + timeLeft) // puts the countdown function on the page
 
 function countdown() {
-    if (timeLeft < 4) {
+    if (timeLeft < 8) {
         $("#countdown").css("color", "red"); // at 3 sec numbers change from green to red
         
         } 
@@ -39,7 +39,7 @@ function noTimeLeft() {
 
 function reset() {
     $("#countdown").css("color", "limegreen"); // color back to green
-    timeLeft = 7; //time back to 7 seconds
+    timeLeft = 15; //time back to 7 seconds
     timerId = setInterval(countdown, 1000); //1 sec increments
     numRight = 0; // resets number correct
   
